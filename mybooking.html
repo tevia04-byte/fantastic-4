@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JTL LAO - My Booking</title>
+  <link rel="stylesheet" href="mbk.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <header class="navbar">
+      <div class="navbar__brand">JTL <span>LAO</span></div>
+          <nav class="navbar__links">
+            <a href="#">menu</a>
+            <a href="#">home</a>
+            <a href="#" class="active">booking</a>
+          </nav>
+      <div class="navbar__right">
+      <div class="navbar__search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search bookings..." />
+      </div>
+          <button class="icon-btn">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <button class="icon-btn avatar">
+            <i class="fa-solid fa-circle-user"></i>
+          </button>
+      </div>
+  </header>
+        
+  <div class="layout">
+
+    <div class="sidebar">
+            <div class="category-title">Category</div>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-list"></i> <span>All</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-futbol"></i> <span>Sports</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-hotel"></i> <span>Hotel</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-utensils"></i> <span>Restaurant</span></a></li>
+            </ul>
+    </div>
+
+    <main class="main">
+
+      <div class="main__header">
+        <h1 class="main__title">My Booking</h1>
+        <p class="main__subtitle">Manage your upcoming and past professional appointments and events.</p>
+        <a href="#" class="upcoming-link">
+          <i class="fa-solid fa-calendar"></i>
+          upcoming bookings
+        </a>
+      </div>
+
+      <section class="section">
+        <h2 class="section__title">ການຈອງຂອງຂ້ອຍ</h2>
+        <p class="section__sub">3 ລາຍການທີ່ກຳລັງດຳເນີນການ</p>
+
+        <div class="cards">
+
+          <!-- Card 1 – Sports -->
+          <div class="card">
+            <div class="card__badge card__badge--sports">Sports</div>
+                <div class="card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=600&q=80" alt="New Arena" class="card__img" />
+                </div>
+                <div>
+                  <span class="status-badge">ຈອງແລ້ວ</span>
+                </div>
+                <div class="card__body">
+                <h3 class="card__name">ເດີ່ນເຕະບານ New Arena</h3>
+                <div class="card__info">
+                  <i class="fa-regular fa-calendar-days icon-blue"></i>
+                  <span>24 ເມສາ 2026</span>
+                </div>
+                <div class="card__info">
+                  <i class="fa-regular fa-clock icon-blue"></i>
+                  <span>16:00 - 20:00 PM</span>
+                </div>
+                <div class="card__info">
+                  <i class="fa-solid fa-location-dot icon-blue"></i>
+                  <span>ບ້ານໂສກປ່າຫລວງ, ສີສັດຕະນາກ, ນະຄອນຫລວງວຽງຈັນ</span>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card 2 – Restaurant -->
+          <div class="card">
+            <div class="card__badge card__badge--restaurant">Restaurant</div>
+                <div class="card__img-wrap">
+                  <img src="./pic/6.webp" alt="Brunch & Buddies" class="card__img" />
+                </div>
+              <div>
+                <span class="status-badge">ຈອງແລ້ວ</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__name">Brunch & Buddies</h3>
+                <div class="card__info">
+                  <i class="fa-regular fa-calendar-days icon-blue"></i>
+                  <span>11 ສິງຫາ 2026</span>
+                </div>
+                <div class="card__info">
+                  <i class="fa-regular fa-clock icon-blue"></i>
+                  <span>19:00 - 21:30 PM</span>
+                </div>
+                <div class="card__info">
+                  <i class="fa-solid fa-location-dot icon-blue"></i>
+                  <span>Anou Village Chao Anou Road, Vientiane 10100</span>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card 3 – Hotel -->
+          <div class="card">
+            <div class="card__badge card__badge--hotel">Hotel</div>
+              <div class="card__img-wrap">
+                <img src="./pic/5.jpg" alt="Amari Vang Vieng" class="card__img" />
+              </div>
+              <div>
+                <span class="status-badge">ຈອງແລ້ວ</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__name">Amari Vang Vieng</h3>
+                <div class="card__info">
+                  <i class="fa-regular fa-calendar-days icon-blue"></i>
+                  <span>03 ທັນວາ 2025</span>
+                </div>
+                <div class="card__info">
+                  <i class="fa-regular fa-clock icon-blue"></i>
+                  <span>14:00 - 20:00 PM</span>
+                </div>
+                <div class="card__info">
+                  <i class="fa-solid fa-location-dot icon-blue"></i>
+                  <span>Song River Road Sawang Village, Vientiane Capital</span>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">ປະຫວັດການຈອງ</h2>
+
+        <div class="history">
+
+          <div class="history-item">
+            <div class="history-item__body">
+              <div class="history-item__name">🏸 LaneXang Center</div>
+              <div class="history-item__date">2 ເມສາ 2026 17:00 - 19:00</div>
+            </div>
+            <div class="history-item__status">
+              <p>ສຳເລັດ</p>
+              <span>2 ອາທິດທີ່ແລ້ວ</span>
+            </div>
+
+          </div>
+
+          <div class="history-item">
+            <div class="history-item__body">
+              <div class="history-item__name">🍜 Kiew Kiew MaLa</div>
+              <div class="history-item__date">27 ມີນາ 2026 13:00 - 14:00</div>
+            </div>
+            <div class="history-item__status">
+              <p>ສຳເລັດ</p>
+              <span>1 ເດືອນທີ່ແລ້ວ</span>
+            </div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-item__body">
+              <div class="history-item__name">🍚 311 Restaurant</div>
+              <div class="history-item__date">5 ເມສາ 2026 · 11:00 - 10:30 PM</div>
+            </div>
+            <div class="history-item__status">
+              <p>ສຳເລັດ</p>
+              <span>2 ອາທິດທີ່ແລ້ວ</span>
+            </div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-item__body">
+              <div class="history-item__name">🍵 7/9 Coffee & Mini Mart</div>
+              <div class="history-item__date">2 ກຸມພາ 2026 · 16:00 - 17:30 PM</div>
+            </div>
+            <div class="history-item__status">
+              <p>ສຳເລັດ</p>
+              <span>ຫລາຍເດືອນທີ່ແລ້ວ</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+  
+  <footer class="main-footer">
+        <div class="footer-container">
+        <div class="footer-section about">
+            <h2 class="logo">JTL <span>LAO</span></h2>
+            <p>ແພັດຟອມຈອງທີ່ພັກ ສະຫນາມກິລາ ແລະ ຮ້ານອາຫານ ອັນດັບຫນຶ່ງໃນລາວ ສະດວກ ວ່ອງໄວ ຫມັ້ນໃຈໄດ້ 100%</p>
+            <div class="socials">
+                <a href="https://facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="https://instagram.com/yourprofile" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://wa.me/85620XXXXXXXX" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="javascript:void(0)">ຫນ້າຫລັກ</a></li>
+                <li><a href="javascript:void(0)">ສະຫນາມກິລາ</a></li>
+                <li><a href="javascript:void(0)">ຮ້ານອາຫານ</a></li>
+                <li><a href="javascript:void(0)">ໂຮງແຮມ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p><i class="fa-regular fa-envelope"></i> support@jtllao.com</p>
+            <p><i class="fa-solid fa-phone"></i> +856 20 XXXX XXXX</p>
+            <p><i class="fa-solid fa-location-dot"></i> Vientiane, Lao PDR</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <P> 2026 JTL LAO | Designed by You </P>
+    </div>
+    </footer>
+  </div>
+
+</body>
+</html>
