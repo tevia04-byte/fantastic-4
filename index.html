@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking LAO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="navbar">
+      <div class="navbar__brand" onclick="goHome()">JTL <span>BOOKING</span></div>
+      <nav class="navbar__links">
+        <a href="#" class="active">menu</a>
+        <a href="#">home</a>
+        <a href="#">booking</a>
+      </nav>
+      <div class="navbar__right">
+        <div class="navbar__search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search bookings..." />
+        </div>
+        <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+        <button class="icon-btn avatar"><i class="fa-solid fa-circle-user"></i></button>
+      </div>
+    </header>
+
+    <!-- ===== HOME PAGE ===== -->
+    <div id="page-home" class="page active">
+      <main class="container">
+
+        <div class="sidebar">
+          <div class="category-title">Category</div>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-list"></i> <span>All</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-futbol"></i> <span>Sports</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-hotel"></i> <span>Hotel</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-utensils"></i> <span>Restaurant</span></a></li>
+          </ul>
+        </div>
+
+        <section class="content">
+          <h2 class="section-title">All</h2>
+          <div class="grid">
+
+            <!-- Card 1 -->
+            <div class="card" onclick="goToDetail(1)" data-category="Sports">
+              <img src="https://live.staticflickr.com/1554/26683968316_24d7d4c9e4_b.jpg" alt="Arena">
+              <div class="card-info">
+                <h3>ເດີ່ນເຕະບານ New Arena</h3>
+                <p>📍 ບ້ານໂພນທອງ, ສີສັດຕະນາກ, ນະຄອນຫຼວງວຽງຈັນ</p>
+                <div class="card-footer">
+                  <span>400.000 ກີບ/ຊົ່ວໂມງ</span>
+                  <button class="btn-blue" onclick="event.stopPropagation(); goToDetail(1)">ຈອງເລີຍ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card" onclick="goToDetail(2)" data-category="Restaurant">
+              <img src="https://cheewajit.com/app/uploads/2017/05/%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B9-%E0%B8%94%E0%B8%B4-%E0%B9%80%E0%B8%AD%E0%B8%A1%E0%B9%80%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B9%8C-01.jpg" alt="Food">
+              <div class="card-info">
+                <h3>ຮ້ານອາຫານ ເຂົ້າມັນໄກ່ 3ສະຫາຍ</h3>
+                <p>📍 ບ້ານໂພນທອງ, ສີສັດຕະນາກ, ນະຄອນຫຼວງວຽງຈັນ</p>
+                <div class="card-footer">
+                  <span>70.000 ກີບ/ໂຕະ</span>
+                  <button class="btn-blue" onclick="event.stopPropagation(); goToDetail(2)">ຈອງເລີຍ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card" onclick="goToDetail(3)" data-category="Hotel">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/46930155.jpg?k=b1ba5a63789436f56d2b883ffe54c6b69d1295f4d20f62ac5a984b220a919aa4&o=" alt="Hotel">
+              <div class="card-info">
+                <h3>ໂຮງແຮມ Simon</h3>
+                <p>📍 ບ້ານໂພນທອງ, ສີສັດຕະນາກ, ນະຄອນຫຼວງວຽງຈັນ</p>
+                <div class="card-footer">
+                  <span>1.500.000 ກີບ/ຄືນ</span>
+                  <button class="btn-blue" onclick="event.stopPropagation(); goToDetail(3)">ຈອງເລີຍ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card" onclick="goToDetail(4)" data-category="Sports">
+              <img src="https://t4.ftcdn.net/jpg/03/80/33/33/360_F_380333325_WoxRdP4rgqu4f1Zo1rZ76pVgMxU6R8Kn.jpg" alt="Arena">
+              <div class="card-info">
+                <h3>ເດີ່ນເຕະບານ BMW</h3>
+                <p>📍 ບ້ານນາໄຊ, ໄຊເສດຖາ, ນະຄອນຫຼວງວຽງຈັນ</p>
+                <div class="card-footer">
+                  <span>550.000 ກີບ/ຊົ່ວໂມງ</span>
+                  <button class="btn-blue" onclick="event.stopPropagation(); goToDetail(4)">ຈອງເລີຍ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card" onclick="goToDetail(5)" data-category="Restaurant">
+              <img src="https://static.spotapps.co/website_images/ab_websites/174603_website_v1/menu.jpg" alt="Food">
+              <div class="card-info">
+                <h3>ຮ້ານອາຫານ ເຂົ້າຕາມສັ່ງ</h3>
+                <p>📍 ບ້ານໂສກປະຫຼວງ, ສີສັດຕະນາກ, ນະຄອນຫຼວງວຽງຈັນ</p>
+                <div class="card-footer">
+                  <span>150.000 ກີບ/ໂຕະ</span>
+                  <button class="btn-blue" onclick="event.stopPropagation(); goToDetail(5)">ຈອງເລີຍ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card" onclick="goToDetail(6)" data-category="Hotel">
+              <img src="https://ik.imagekit.io/tvlk/image/imageResource/2024/06/21/1718957715688-26316a3442d27400e8a6919f75237573.jpeg?tr=q-75" alt="Hotel">
+              <div class="card-info">
+                <h3>ໂຮງແຮມ Savia</h3>
+                <p>📍 ບ້ານຮ່ອງແກ, ໄຊເສດຖາ, ນະຄອນຫຼວງວຽງຈັນ</p>
+                <div class="card-footer">
+                  <span>10.500.000 ກີບ/ຄືນ</span>
+                  <button class="btn-blue" onclick="event.stopPropagation(); goToDetail(6)">ຈອງເລີຍ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card" onclick="goToDetail(7)" data-category="Sports">
+              <img src="https://thumbs.dreamstime.com/b/wide-angle-view-lit-football-stadium-interior-expansive-shot-illuminated-showcasing-green-playing-field-packed-stands-380699665.jpg" alt="Arena">
+              <div class="card-info">
+                <h3>ເດີ່ນເຕະບານ SNV</h3>
+                <p>📍 ບ້ານໂພນສີນວນ, ໄຊເສດຖາ, ນະຄອນຫຼວງວຽງຈັນ</p>
+                <div class="card-footer">
+                  <span>950.000 ກີບ/ຊົ່ວໂມງ</span>
+                  <button class="btn-blue" onclick="event.stopPropagation(); goToDetail(7)">ຈອງເລີຍ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card" onclick="goToDetail(8)" data-category="Restaurant">
+              <img src="https://images.deliveryhero.io/image/fd-la/LH/v1qh-listing.JPG" alt="Food">
+              <div class="card-info">
+                <h3>ຮ້ານອາຫານ ເຂົ້າຂາຫມູຂອງແທ້</h3>
+                <p>📍 ບ້ານໂພນປາເປົ້າ, ສີສັດຕະນາກ, ນະຄອນຫຼວງວຽງຈັນ</p>
+                <div class="card-footer">
+                  <span>70.000 ກີບ/ໂຕະ</span>
+                  <button class="btn-blue" onclick="event.stopPropagation(); goToDetail(8)">ຈອງເລີຍ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="card" onclick="goToDetail(9)" data-category="Hotel">
+              <img src="https://imageio.forbes.com/specials-images/imageserve/68aafd1e6087d1488d23ff9f/Flowing-exterior-lines-of-Dubai-s-Jumeirah-Marsa-Al-Arab--a-new-ultra-luxury-hotel/0x0.jpg?format=jpg&crop=1920,1080,x0,y0,safe&width=960" alt="Hotel">
+              <div class="card-info">
+                <h3>ໂຮງແຮມ Relax</h3>
+                <p>📍 ບ້ານສີສັງວອນ, ໄຊເສດຖາ, ນະຄອນຫຼວງວຽງຈັນ</p>
+                <div class="card-footer">
+                  <span>15.500.000 ກີບ/ຄືນ</span>
+                  <button class="btn-blue" onclick="event.stopPropagation(); goToDetail(9)">ຈອງເລີຍ</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </main>
+
+      <footer class="main-footer">
+        <div class="footer-container">
+          <div class="footer-section about">
+            <h2 class="logo">JTL <span>BOOKING</span></h2>
+            <p>ແພັດຟອມຈອງທີ່ພັກ ສະຫນາມກິລາ ແລະ ຮ້ານອາຫານ ອັນດັບຫນຶ່ງໃນລາວ ສະດວກ ວ່ອງໄວ ຫມັ້ນໃຈໄດ້ 100%</p>
+            <div class="socials">
+              <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+              <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+              <a href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+          </div>
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="javascript:void(0)">ຫນ້າຫລັກ</a></li>
+              <li><a href="javascript:void(0)">ສະຫນາມກິລາ</a></li>
+              <li><a href="javascript:void(0)">ຮ້ານອາຫານ</a></li>
+              <li><a href="javascript:void(0)">ໂຮງແຮມ</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p><i class="fa-regular fa-envelope"></i> support@jtllao.com</p>
+            <p><i class="fa-solid fa-phone"></i> +856 20 XXXX XXXX</p>
+            <p><i class="fa-solid fa-location-dot"></i> Vientiane, Lao PDR</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 JTL LAO | Designed by You</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ===== DETAIL PAGE ===== -->
+    <div id="page-detail" class="page">
+      <button class="detail-back-btn" onclick="goHome()">
+        <i class="fa-solid fa-arrow-left"></i> ກັບຄືນ
+      </button>
+
+      <div class="detail-wrapper">
+        <div class="detail-hero">
+          <img id="detail-img" src="" alt="">
+          <div class="detail-hero-overlay"></div>
+          <div class="detail-hero-text">
+            <div class="detail-category-badge" id="detail-badge"></div>
+            <h1 id="detail-title"></h1>
+          </div>
+        </div>
+
+        <div class="detail-body">
+          <div>
+            <div class="detail-info-card">
+              <h2><i class="fa-solid fa-circle-info"></i> ຂໍ້ມູນທົ່ວໄປ</h2>
+              <ul class="detail-meta-list">
+                <li><i class="fa-solid fa-location-dot"></i><span id="detail-location"></span></li>
+                <li><i class="fa-solid fa-clock"></i><span id="detail-hours"></span></li>
+                <li><i class="fa-solid fa-phone"></i><span id="detail-phone"></span></li>
+                <li><i class="fa-solid fa-tag"></i><span id="detail-price"></span></li>
+              </ul>
+              <div class="detail-rating-row">
+                <div class="stars" id="detail-stars"></div>
+                <span class="rating-score" id="detail-score"></span>
+                <span class="rating-count" id="detail-count"></span>
+              </div>
+              <p class="detail-description" id="detail-desc"></p>
+              <div class="detail-amenities" id="detail-amenities"></div>
+            </div>
+          </div>
+
+          <div class="booking-card">
+            <div class="price-tag" id="booking-price"></div>
+            <div class="price-sub" id="booking-unit"></div>
+            <div class="form-group">
+              <label>📅 ເລືອກວັນທີ</label>
+              <input type="date" id="book-date">
+            </div>
+            <div class="form-group">
+              <label>⏰ ເລືອກເວລາ</label>
+              <input type="time" id="book-time">
+            </div>
+            <div class="form-group">
+              <label>👥 ຈຳນວນຄົນ</label>
+              <input type="number" id="book-guests" min="1" value="1">
+            </div>
+            <div class="form-group">
+              <label>📝 ໝາຍເຫດ (ຖ້າມີ)</label>
+              <input type="text" id="book-note" placeholder="ຂໍ້ຄວາມພິເສດ...">
+            </div>
+            <button class="confirm-btn" onclick="submitBooking()">✅ ຢືນຢັນການຈອງ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast">🎉 ຈອງສຳເລັດແລ້ວ!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
